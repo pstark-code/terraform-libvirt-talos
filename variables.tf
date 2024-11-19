@@ -100,6 +100,69 @@ variable "worker_count" {
   }
 }
 
+variable "controller_root_imgsize_gb" {
+  type    = number
+  default = 40
+  validation {
+    condition     = var.controller_root_imgsize_gb >= 40
+    error_message = "Must be 40 or more."
+  }
+}
+
+variable "worker_root_imgsize_gb" {
+  type    = number
+  default = 40
+  validation {
+    condition     = var.worker_root_imgsize_gb >= 40
+    error_message = "Must be 40 or more."
+  }
+}
+
+variable "worker_data_imgsize_gb" {
+  type    = number
+  default = 32
+  validation {
+    condition     = var.worker_data_imgsize_gb >= 32
+    error_message = "Must be 32 or more."
+  }
+}
+
+variable "controller_vcpus" {
+  type    = number
+  default = 4
+  validation {
+    condition     = var.controller_vcpus >= 4
+    error_message = "Must be 4 or more."
+  }
+}
+
+variable "controller_memory_gb" {
+  type    = number
+  default = 4
+  validation {
+    condition     = var.controller_memory_gb >= 4
+    error_message = "Must be 4 or more."
+  }
+}
+
+variable "worker_vcpus" {
+  type    = number
+  default = 4
+  validation {
+    condition     = var.worker_vcpus >= 4
+    error_message = "Must be 4 or more."
+  }
+}
+
+variable "worker_memory_gb" {
+  type    = number
+  default = 4
+  validation {
+    condition     = var.worker_memory_gb >= 4
+    error_message = "Must be 4 or more."
+  }
+}
+
 variable "talos_libvirt_base_volume_name" {
   type    = string
   default = "talos-1.8.3.qcow2"
