@@ -96,6 +96,11 @@ locals {
       proxy = {
         disabled = true
       }
+      apiServer = {
+        certSANs = [
+          "10.0.22.161"
+        ]
+      }
     }
   }
 }
