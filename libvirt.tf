@@ -2,6 +2,8 @@
 resource "libvirt_network" "talos" {
   name      = var.prefix
   mode      = "nat"
+  # mode      = "route"
+  autostart = true
   domain    = var.cluster_node_domain
   addresses = [var.cluster_node_network]
   dhcp {
