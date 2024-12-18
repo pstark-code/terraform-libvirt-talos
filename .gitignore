@@ -12,3 +12,4 @@ talosconfig.yml
 kubeconfig.yml
 kubernetes-ingress-ca-crt.pem
 tmp/
+mise.local.toml

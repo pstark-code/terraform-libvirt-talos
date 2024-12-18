@@ -1,0 +1,16 @@
+[tools]
+python = "3.12"
+
+[env]
+KUBECONFIG  = "{{config_root}}/kubeconfig.yml"
+TALOSCONFIG = "{{config_root}}/talosconfig.yml"
+controllers = "{{ exec(command='terraform output -raw controllers') }}"
+workers     = "{{ exec(command='terraform output -raw workers') }}"
+all         = "{{ env.controllers }},{{ env.workers }}"
+c0          = "{{ env.controllers | split(pat=',') | first }}"
+w0          = "{{ env.workers | split(pat=',') | first }}"
+
+
+
+
+
