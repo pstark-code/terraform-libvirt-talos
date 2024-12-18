@@ -3,6 +3,18 @@ output "talosconfig" {
   sensitive = true
 }
 
+output "workerconfig" {
+  value =  data.talos_machine_configuration.worker.machine_configuration
+  sensitive = true
+}
+
+output "controllerconfig" {
+  value =  data.talos_machine_configuration.controller.machine_configuration
+  sensitive = true
+}
+
+
+
 output "kubeconfig" {
   value     = talos_cluster_kubeconfig.talos.kubeconfig_raw
   sensitive = true
