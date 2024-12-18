@@ -18,6 +18,12 @@ The [spin extension](https://github.com/siderolabs/extensions/tree/main/containe
 
 # Usage (Ubuntu 22.04 host)
 
+Install packages: 
+
+- kubectl
+- yq
+- ...
+
 Install libvirt:
 
 ```bash
