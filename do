@@ -363,6 +363,11 @@ case $1 in
   init)
     init
     ;;
+  piraeus-install)
+    piraeus-install
+    #export-kubernetes-ingress-ca-crt
+    #info
+    ;;
   plan)
     plan
     ;;
