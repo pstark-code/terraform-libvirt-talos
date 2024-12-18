@@ -38,5 +38,9 @@
         "vgdisplay",
         "virt",
         "wasmtime"
+    ],
+    "conventionalCommits.scopes": [
+        "devenv",
+        "gitea"
     ]
 }
