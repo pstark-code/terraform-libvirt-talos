@@ -97,7 +97,7 @@ data "helm_template" "gitea" {
       }
       admin = {
         username = "gitea"
-        password = "gitea"
+        password = "giteagitea"
         email    = "gitea@${var.ingress_domain}"
       }
     }
