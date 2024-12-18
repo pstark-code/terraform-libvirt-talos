@@ -41,6 +41,7 @@
     ],
     "conventionalCommits.scopes": [
         "devenv",
-        "gitea"
+        "gitea",
+        "docs"
     ]
 }
